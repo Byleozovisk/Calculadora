@@ -1,20 +1,21 @@
-numero1 = (input("Número 1: "))
+inserção = False
 
-while not isinstance(numero1, float) and numero1 != "":
-  print("Caracter inválido, favor digitar um número")
-  numero1 = float(input("Número 1: "))
-  
+while inserção == False:
+  try:
+    numero1 = float (input("Número 1: ")) 
+    inserção == True
+    break
+  except ValueError:
+    print("Caractere inválido, favor digitar um número")
+
 operacao = input("Operação (+, -, *, /, $)")
 
 if operacao == "$":
   resultado = (numero1 ** (1 / 2))
-  print(resultado)
-
+ 
   convert = str(resultado).split(".")[1]
 
   terceiracasa = convert[2]
-
-  print (terceiracasa)
 
   if float(terceiracasa) > 5:
     print("O resultado é", "{:.3f}".format(resultado))
@@ -26,12 +27,13 @@ else:
 
 if operacao == "+":
   resultado = (numero1 + numero2)
+  print (resultado)
 elif operacao == "-":
   resultado = (numero1 - numero2)
+  print (resultado)
 elif operacao == "*":
   resultado = (numero1 * numero2)
+  print (resultado)
 elif operacao == "/":
   resultado = (numero1 / numero2)
-
-print(resultado)
-
+  print (resultado)
