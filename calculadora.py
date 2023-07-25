@@ -18,9 +18,9 @@ if operacao == "$":
   terceiracasa = convert[2]
 
   if float(terceiracasa) > 5:
-    print("O resultado é", "{:.3f}".format(resultado))
+    print("O resultado é: ", "{:.3f}".format(resultado))
   else:
-    print("O resultado é", "{:.2f}".format(resultado))
+    print("O resultado é: ", "{:.2f}".format(resultado))
         
 else:
   numero2 = float(input("Número 2: "))
@@ -36,4 +36,4 @@ elif operacao == "*":
   print (resultado)
 elif operacao == "/":
   resultado = (numero1 / numero2)
-  print (resultado)
+  print ( "O resultado é: ", (resultado))
